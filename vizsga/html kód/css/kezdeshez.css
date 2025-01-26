@@ -1,0 +1,88 @@
+body {
+    background-image: url("../képek/csarda.PNG");
+    background-size: cover;       /* A kép kitölti a teljes képernyőt */
+    background-position: center;  /* A kép középre igazítása */
+    background-repeat: no-repeat; /* A kép ne ismétlődjön */
+    margin: 0;
+    height: 100vh;                /* Magasság beállítása teljes képernyőre */
+
+}
+
+/* H1 stílusok */
+h1 {
+    background-color: rgba(255, 223, 128, 0.7); /* Halvány sárga háttér, 70% átlátszóság */
+    color: #333333;
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 80%;
+    margin: 20px auto;
+}
+
+/* Általános stílusok */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+/* Konténer stílusok a középső részhez, átlátszó háttérrel */
+.login-container {
+    text-align: center;
+    padding: 40px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.8); /* Átlátszó fehér háttér, 80% opacitás */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+/* Szöveg stílus a választási lehetőségek felett */
+p {
+    margin-bottom: 20px;
+    color: #666666;
+}
+
+/* Gombok stílusa */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.button {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+.guest-button {
+    background-color: #4CAF50;
+}
+
+.guest-button:hover {
+    background-color: #45a049;
+}
+
+.login-button {
+    background-color: #2196F3;
+}
+
+.login-button:hover {
+    background-color: #0b7dda;
+}
+
+
+
+
+
+
+
