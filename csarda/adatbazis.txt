@@ -1,0 +1,39 @@
+-- Adatbázis létrehozása
+CREATE DATABASE csarda;
+
+-- Adatbázis kiválasztása
+USE csarda;
+
+-- felhasznalok tábla létrehozása
+CREATE TABLE felhasznalok (
+    id INT AUTO_INCREMENT PRIMARY KEY, -- Egyedi azonosító minden felhasználóhoz
+    felhasznalonev VARCHAR(50) NOT NULL, -- Felhasználónév
+    jelszo VARCHAR(255) NOT NULL, -- Titkosított jelszó
+    email VARCHAR(100) NOT NULL -- Felhasználó email címe
+);
+
+-- etelek tábla létrehozása
+CREATE TABLE etelek (
+    id INT AUTO_INCREMENT PRIMARY KEY, -- Egyedi azonosító minden ételhez
+    nev VARCHAR(100) NOT NULL, -- Étel neve
+    leiras TEXT, -- Étel leírása
+    ar INT NOT NULL -- Étel ára
+);
+
+-- rendelesek tábla létrehozása
+CREATE TABLE rendelesek (
+    id INT AUTO_INCREMENT PRIMARY KEY, -- Egyedi azonosító minden rendeléshez
+    felhasznalo_id INT, -- A rendelést leadó felhasználó azonosítója
+    etel_id INT, -- A rendelt étel azonosítója
+    mennyiseg INT, -- Rendelt mennyiség
+    datum TIMESTAMP DEFAULT CURRENT_TIMESTAMP, -- Rendelés dátuma
+    FOREIGN KEY (felhasznalo_id) REFERENCES felhasznalok(id), -- Külső kulcs a felhasználóhoz
+    FOREIGN KEY (etel_id) REFERENCES etelek(id) -- Külső kulcs az ételhez
+);
+
+
+-- utólag hozzáadva:
+ALTER TABLE felhasznalok
+ADD COLUMN admin TINYINT(1) DEFAULT 0; -- 0: nem admin, 1: admin --Admin felasználó
+INSERT INTO felhasznalok (felhasznalonev, jelszo, email, admin)
+VALUES ('admin', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'admin@example.com', 1); -- Admin létrehozása
