@@ -2,7 +2,7 @@
 
 
 ## 📌 Projekt leírása
-A **Mátyás Csárda** egy webalapú éttermi rendszer, amely HTML és PHP felhasználásával készült. A projekt célja egy modern és felhasználóbarát weboldal létrehozása, amely bemutatja az étterem kínálatát és lehetőséget biztosít az online asztalfoglalásra.
+A **Mátyás Csárda** egy webalapú éttermi rendszer, amely HTML és PHP felhasználásával készült. A projekt célja egy modern és felhasználóbarát weboldal létrehozása, amely bemutatja az étterem kínálatát és lehetőséget biztosít az online rendelésre.
 
 ## 🚀 Technológiák
 A projekt az alábbi technológiákat használja:
@@ -10,6 +10,7 @@ A projekt az alábbi technológiákat használja:
 - **CSS3** - Stílus és reszponzivitás
 - **PHP** - Backend logika és adatbázis kapcsolat
 - **MySQL** - Adatbázis-kezelés
+- **Api** - Backend-adatbázis kapcsolat
 
 
 
